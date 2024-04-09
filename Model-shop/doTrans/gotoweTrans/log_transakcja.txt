@@ -1,0 +1,5 @@
+Date: 2024-01-14
+Item ID: 1
+   Item name: Monitor
+   Price: 700
+Total price: 700

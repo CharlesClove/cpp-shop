@@ -1,0 +1,40 @@
+    int main()
+    {
+      
+        int wybor;
+        vector<int> wybraneProdukty;
+        do
+        {
+            std::cout << "\nMenu:\n";
+            std::cout << "1. Produkty\n";
+            std::cout << "2. Dodaj do zamowienia\n";
+            std::cout << "Wybierz opcje (wpisz 0 aby wyjsc): ";
+            std::cin >> wybor;
+
+            switch (wybor)
+            {
+            case 1:
+                ZobaczProdukty();
+                break;
+            case 2:
+                int wybor2;
+                do{
+                    ZobaczProdukty();
+                    int idproduktu;
+                    std::cout << "\nDodaj do zamowienia(podaj id produktu);\n";
+                    cin >> idproduktu;
+                    wybraneProdukty.push_back(idproduktu);
+                    DodajDoZamowienia("Jan",wybraneProdukty);
+                } while (wybor2 != 0);
+                break;
+            case 0:
+                std::cout << "Wyjscie z programu.\n";
+                break;
+            default:
+                std::cout << "Niepoprawny wybor. Wybierz ponownie.\n";
+                break;
+            }
+        } while (wybor != 0);
+
+        return 0;
+    }
